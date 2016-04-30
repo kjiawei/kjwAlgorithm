@@ -1,0 +1,39 @@
+public class algorithm{
+	/*
+	编码gbk的不可映射字符：-encoding UTF-8 
+	 */
+	public static void main(String args[]){
+		//reversal the string[String的库函数：split,indexOf,lastIndexOf,subString]
+		//StringBuffer的reverse()
+		String s = "1-325--";
+		/*StringBuffer rev = new StringBuffer();
+		for(int i=s.length()-1;i>=0;i--){
+			rev.append(s.charAt(i));
+		}*/
+		System.out.println(digui(200));//复习数位
+		
+	}
+	//reversal the word&sentence
+	public static String reverse(String s){
+		int pos=0;
+		StringBuilder sb=new StringBuilder();
+		for(int i=0;i<s.length();i++){
+			char c=s.charAt(i);//将每个字符拆成一行
+			System.out.println(c);
+			if(c==' '){pos=0;}
+			sb.insert(pos, c);//将拆成的行排成列
+			System.out.println(sb.toString());
+			if(c!=' '){pos++;}
+		}
+		return sb.toString();
+	}
+    //recurse
+    public static int digui(int n){
+    	//this.m = m;//复习this
+    	if(n==0 || n==1){
+    		return n;
+    	}else{
+    		return digui(n-1)*n;
+    	}
+    }
+}
