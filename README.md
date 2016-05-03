@@ -1,3 +1,2 @@
-# kjwAlgorithm
-exercise and remind some useful code
-//这是用来记录算法学习的文件
+# 用来记录算法学习
+#三分支：Java C PHP
